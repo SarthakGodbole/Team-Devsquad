@@ -1,0 +1,338 @@
+/* Drumkit Section Specific Styles */
+.drumkit-section {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #434343 0%, #000000 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+}
+
+.drumkit-section header {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.drumkit-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.drumkit-section .instructions {
+    font-size: 1em;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.4;
+    color: white;
+}
+
+.drumkit-section main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.drumkit-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.drumkit {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    align-items: center;
+    justify-items: center;
+}
+
+.drum {
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    margin: 0 auto;
+    position: relative;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.3),
+        inset 0 4px 8px rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.drum-svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+}
+
+.drum-label {
+    font-size: 0.9em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.drum:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 12px 24px rgba(0, 0, 0, 0.4),
+        inset 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.drum:hover .drum-svg {
+    transform: scale(1.1);
+}
+
+.drum:active,
+.drum.active {
+    transform: scale(0.95) translateY(0);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.drum.active .drum-svg {
+    transform: scale(1.2);
+}
+
+/* Individual drum styling */
+.kick {
+    background: linear-gradient(145deg, rgba(139, 0, 0, 0.3), rgba(220, 20, 60, 0.2));
+    border-color: #8B0000;
+}
+
+.snare {
+    background: linear-gradient(145deg, rgba(65, 105, 225, 0.3), rgba(0, 0, 139, 0.2));
+    border-color: #4169E1;
+}
+
+.hihat-closed {
+    background: linear-gradient(145deg, rgba(192, 192, 192, 0.3), rgba(128, 128, 128, 0.2));
+    border-color: #C0C0C0;
+}
+
+.hihat-open {
+    background: linear-gradient(145deg, rgba(192, 192, 192, 0.3), rgba(169, 169, 169, 0.2));
+    border-color: #A9A9A9;
+}
+
+.tom1 {
+    background: linear-gradient(145deg, rgba(255, 107, 107, 0.3), rgba(204, 0, 0, 0.2));
+    border-color: #FF6B6B;
+}
+
+.tom2 {
+    background: linear-gradient(145deg, rgba(46, 213, 115, 0.3), rgba(0, 160, 0, 0.2));
+    border-color: #2ED573;
+}
+
+.crash {
+    background: linear-gradient(145deg, rgba(255, 215, 0, 0.3), rgba(184, 134, 11, 0.2));
+    border-color: #FFD700;
+}
+
+.ride {
+    background: linear-gradient(145deg, rgba(205, 133, 63, 0.3), rgba(139, 69, 19, 0.2));
+    border-color: #CD853F;
+}
+
+.drum.active {
+    animation: drumHit 0.2s ease-out;
+}
+
+@keyframes drumHit {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), inset 0 4px 8px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), inset 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Mobile Responsiveness for Drumkit */
+@media (max-width: 1024px) {
+    .drumkit {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .drum {
+        width: 140px;
+        height: 140px;
+    }
+
+    .drum-svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    .drum-label {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .drumkit-section h1 {
+        font-size: 2em;
+    }
+
+    .drumkit-section .instructions {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    .drumkit-container {
+        padding: 25px;
+        margin: 0 10px;
+    }
+
+    .drumkit {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .drum {
+        width: 120px;
+        height: 120px;
+    }
+
+    .drum-svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .drum-label {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .drumkit-container {
+        padding: 20px;
+        margin: 0 5px;
+    }
+
+    .drumkit {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .drum {
+        width: 100px;
+        height: 100px;
+    }
+
+    .drum-svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .drum-label {
+        font-size: 0.6em;
+    }
+}
+/* --- Navbar Responsive Enhancements --- */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    z-index: 1001;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .side_icon {
+    display: block;
+  }
+}
+
+/* --- Instruments Section: Improved spacing and alignment --- */
+@media (max-width: 768px) {
+  .instrument-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instrument-card {
+    width: 90%;
+  }
+}
+
+/* --- Piano Section: Already mobile optimized, but small tweaks --- */
+@media (max-width: 480px) {
+  .piano-section {
+    padding: 2rem 0;
+  }
+
+  .piano-container {
+    padding: 15px;
+  }
+
+  .instructions {
+    font-size: 0.9em;
+    padding: 0 10px;
+  }
+}
+
+/* --- Drumkit Responsive Grid --- */
+@media (max-width: 1024px) {
+  .drumkit {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .drumkit {
+    grid-template-columns: 1fr;
+  }
+
+  .drum {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .drum-svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .drum-label {
+    font-size: 0.8em;
+  }
+}

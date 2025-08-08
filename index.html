@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeShare - Create and Share Music</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="drumkit.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <i class="fas fa-music"></i>
+        VibeShare
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home"><i class="fas fa-home"></i></a></li>
+        <li><a href="#piano">Piano</a></li>
+        <li><a href="#drumkit">Drumkit</a></li>
+        <!-- <li><a href="/genres">Genres</a></li> -->
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="side_icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">VibeShare</h1>
+      <p class="hero-subtitle">Create music, share vibes. Play instruments, feel the rhythm.</p>
+    </div>
+  </section>
+
+  <!-- Instruments Section -->
+
+  <section class="instruments container">
+    <h2 class="section-title">Explore Instruments</h2>
+    <div class="instrument-cards">
+      <div class="instrument-card">
+        <h3>Piano</h3>
+        <p>Experience the magic of melody with our virtual piano. Smooth, responsive, and perfect for practice or fun.
+        </p>
+      </div>
+      <div class="instrument-card">
+        <h3>Drumkit</h3>
+        <p>Feel the beat with our interactive drumkit. From kick to snare, lay down grooves like a pro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Piano Section -->
+  <section id="piano" class="piano-section">
+    <div class="piano-header">
+      <h2>Virtual Piano</h2>
+      <p class="instructions">Click the keys or use your keyboard (Q-U for white keys, 1-0 for black keys)</p>
+    </div>
+
+    <div class="piano-main">
+      <div class="piano-container">
+        <div class="piano">
+          <!-- Fourth Octave (C4-B4) -->
+          <button class="key white" data-note="C4" data-key="q">C4</button>
+          <button class="key black" data-note="C#4" data-key="1">C#4</button>
+          <button class="key white" data-note="D4" data-key="w">D4</button>
+          <button class="key black" data-note="D#4" data-key="2">D#4</button>
+          <button class="key white" data-note="E4" data-key="e">E4</button>
+          <button class="key white" data-note="F4" data-key="r">F4</button>
+          <button class="key black" data-note="F#4" data-key="3">F#4</button>
+          <button class="key white" data-note="G4" data-key="t">G4</button>
+          <button class="key black" data-note="G#4" data-key="4">G#4</button>
+          <button class="key white" data-note="A4" data-key="y">A4</button>
+          <button class="key black" data-note="A#4" data-key="5">A#4</button>
+          <button class="key white" data-note="B4" data-key="u">B4</button>
+
+          <!-- Fifth Octave (C5-B5) -->
+          <button class="key white" data-note="C5" data-key="i">C5</button>
+          <button class="key black" data-note="C#5" data-key="6">C#5</button>
+          <button class="key white" data-note="D5" data-key="o">D5</button>
+          <button class="key black" data-note="D#5" data-key="7">D#5</button>
+          <button class="key white" data-note="E5" data-key="p">E5</button>
+          <button class="key white" data-note="F5" data-key="a">F5</button>
+          <button class="key black" data-note="F#5" data-key="8">F#5</button>
+          <button class="key white" data-note="G5" data-key="s">G5</button>
+          <button class="key black" data-note="G#5" data-key="9">G#5</button>
+          <button class="key white" data-note="A5" data-key="d">A5</button>
+          <button class="key black" data-note="A#5" data-key="0">A#5</button>
+          <button class="key white" data-note="B5" data-key="f">B5</button>
+
+          <!-- Sixth Octave -->
+          <button class="key white" data-note="C6" data-key="g">C6</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drumkit Section -->
+
+
+  <!-- Drumkit Section -->
+  <section id="drumkit" class="drumkit-section">
+    <header>
+      <h1>Virtual Drumkit</h1>
+      <p class="instructions">Click the drums or use keys: Z(Kick), X(Snare), C(Hi-Hat Closed), V(Hi-Hat Open),
+        B(Tom1), N(Tom2), M(Crash), ,(Ride)</p>
+    </header>
+
+    <main>
+      <div class="drumkit-container">
+        <div class="drumkit">
+          <!-- Top Row -->
+          <div class="drum crash" data-sound="crash" data-key="m">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <circle cx="50" cy="30" r="25" fill="#FFD700" stroke="#B8860B" stroke-width="2" />
+              <ellipse cx="50" cy="30" rx="25" ry="3" fill="#FFF8DC" />
+              <line x1="30" y1="20" x2="70" y2="40" stroke="#B8860B" stroke-width="1" />
+              <line x1="30" y1="40" x2="70" y2="20" stroke="#B8860B" stroke-width="1" />
+            </svg>
+            <div class="drum-label">CRASH</div>
+          </div>
+
+          <div class="drum tom1" data-sound="tom1" data-key="b">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <ellipse cx="50" cy="40" rx="20" ry="15" fill="#FF6B6B" stroke="#CC0000" stroke-width="2" />
+              <ellipse cx="50" cy="25" rx="20" ry="3" fill="#FF9999" />
+              <rect x="30" y="25" width="40" height="30" fill="#CC0000" rx="2" />
+              <circle cx="35" cy="35" r="2" fill="#800000" />
+              <circle cx="50" cy="35" r="2" fill="#800000" />
+              <circle cx="65" cy="35" r="2" fill="#800000" />
+            </svg>
+            <div class="drum-label">TOM 1</div>
+          </div>
+
+          <div class="drum tom2" data-sound="tom2" data-key="n">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <ellipse cx="50" cy="45" rx="22" ry="18" fill="#2ED573" stroke="#00A000" stroke-width="2" />
+              <ellipse cx="50" cy="27" rx="22" ry="3" fill="#90EE90" />
+              <rect x="28" y="27" width="44" height="36" fill="#00A000" rx="2" />
+              <circle cx="35" cy="38" r="2" fill="#006400" />
+              <circle cx="50" cy="38" r="2" fill="#006400" />
+              <circle cx="65" cy="38" r="2" fill="#006400" />
+            </svg>
+            <div class="drum-label">TOM 2</div>
+          </div>
+
+          <div class="drum ride" data-sound="ride" data-key=",">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <circle cx="50" cy="35" r="28" fill="#CD853F" stroke="#8B4513" stroke-width="2" />
+              <ellipse cx="50" cy="35" rx="28" ry="4" fill="#DEB887" />
+              <circle cx="50" cy="35" r="20" fill="none" stroke="#8B4513" stroke-width="1" />
+              <circle cx="50" cy="35" r="12" fill="none" stroke="#8B4513" stroke-width="1" />
+              <circle cx="50" cy="35" r="4" fill="#8B4513" />
+            </svg>
+            <div class="drum-label">RIDE</div>
+          </div>
+
+          <!-- Middle Row -->
+          <div class="drum hihat-closed" data-sound="hihat-closed" data-key="c">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <circle cx="50" cy="35" r="18" fill="#C0C0C0" stroke="#808080" stroke-width="2" />
+              <circle cx="50" cy="32" r="18" fill="#E6E6E6" stroke="#808080" stroke-width="2" />
+              <ellipse cx="50" cy="32" rx="18" ry="2" fill="#F5F5F5" />
+              <line x1="50" y1="10" x2="50" y2="50" stroke="#404040" stroke-width="3" />
+              <circle cx="50" cy="10" r="3" fill="#404040" />
+            </svg>
+            <div class="drum-label">HI-HAT (CLOSED)</div>
+          </div>
+
+          <div class="drum kick" data-sound="kick" data-key="z">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <circle cx="50" cy="50" r="35" fill="#8B0000" stroke="#400000" stroke-width="3" />
+              <circle cx="50" cy="45" r="35" fill="#B22222" stroke="#400000" stroke-width="2" />
+              <circle cx="50" cy="45" r="25" fill="#DC143C" />
+              <circle cx="50" cy="45" r="15" fill="#800000" />
+              <circle cx="50" cy="45" r="8" fill="#400000" />
+              <rect x="15" y="80" width="70" height="15" fill="#2F2F2F" rx="3" />
+            </svg>
+            <div class="drum-label">KICK</div>
+          </div>
+
+          <div class="drum snare" data-sound="snare" data-key="x">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <ellipse cx="50" cy="45" rx="25" ry="20" fill="#4169E1" stroke="#000080" stroke-width="2" />
+              <ellipse cx="50" cy="25" rx="25" ry="3" fill="#87CEEB" />
+              <rect x="25" y="25" width="50" height="40" fill="#000080" rx="2" />
+              <line x1="30" y1="35" x2="70" y2="35" stroke="#FFD700" stroke-width="2" />
+              <line x1="30" y1="45" x2="70" y2="45" stroke="#FFD700" stroke-width="2" />
+              <line x1="30" y1="55" x2="70" y2="55" stroke="#FFD700" stroke-width="2" />
+            </svg>
+            <div class="drum-label">SNARE</div>
+          </div>
+
+          <div class="drum hihat-open" data-sound="hihat-open" data-key="v">
+            <svg viewBox="0 0 100 100" class="drum-svg">
+              <circle cx="50" cy="40" r="18" fill="#C0C0C0" stroke="#808080" stroke-width="2" />
+              <circle cx="45" cy="25" r="18" fill="#E6E6E6" stroke="#808080" stroke-width="2" />
+              <ellipse cx="45" cy="25" rx="18" ry="2" fill="#F5F5F5" />
+              <line x1="50" y1="10" x2="50" y2="50" stroke="#404040" stroke-width="3" />
+              <circle cx="50" cy="10" r="3" fill="#404040" />
+            </svg>
+            <div class="drum-label">HI-HAT (OPEN)</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+
+
+  <!-- <script src="script.js"></script> -->
+  <script type="module" src="piano.js"></script>
+  <script type="module" src="drumkit.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
